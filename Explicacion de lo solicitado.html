@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rúbrica de Evaluación HTML & CSS</title>
+  <style>
+    /* RESET BÁSICO */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #fafafa;
+      color: #333;
+      padding: 20px;
+      line-height: 1.4;
+    }
+    h1, h2, h3 {
+      margin-bottom: 10px;
+      color: #444;
+    }
+    h1 {
+      margin-top: 0;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    /* CONTENEDOR PRINCIPAL */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .criterio {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .criterio h2 {
+      margin-bottom: 5px;
+      font-size: 1.2rem;
+      color: #222;
+      text-transform: uppercase;
+    }
+    .criterio .ponderacion {
+      font-style: italic;
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+      color: #666;
+    }
+    .criterio .aspects {
+      margin-bottom: 15px;
+      padding-left: 20px;
+    }
+    .criterio .aspects li {
+      list-style: disc;
+      margin-bottom: 4px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      font-size: 0.9rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #f5f5f5;
+      font-weight: bold;
+    }
+    .nivel {
+      width: 25%;
+    }
+    .descripcion {
+      width: 60%;
+    }
+    .puntaje {
+      width: 15%;
+      text-align: center;
+    }
+    /* ESTILOS DE TITULARES DE TABLA */
+    .table-title {
+      margin-top: 15px;
+      font-weight: bold;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+    /* APARIENCIA GENERAL */
+    .highlight {
+      color: #b5651d;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Rúbrica de Evaluación HTML & CSS</h1>
+
+    <!-- CRITERIO 1 -->
+    <div class="criterio">
+      <h2>Criterio 1: Estructura y Etiquetas HTML (CE1, RA4)</h2>
+      <p class="ponderacion">Ponderación máxima: <span class="highlight">1.25 puntos</span></p>
+      <h3>Aspectos a evaluar</h3>
+      <ul class="aspects">
+        <li>Uso de etiquetas semánticas (<code>header</code>, <code>main</code>, <code>section</code>, <code>footer</code>, etc.)</li>
+        <li>Empleo de texto, hiperenlaces, tablas, formularios, imágenes.</li>
+        <li>Correcto anidamiento (buena práctica).</li>
+        <li>Se evidencia estructura inspirada en Cat Photos (uso de <code>&lt;img&gt;</code>, <code>&lt;section&gt;</code>, etc.).</li>
+      </ul>
+
+      <p class="table-title">Tabla de nivel de logro</p>
+      <table>
+        <thead>
+          <tr>
+            <th class="nivel">Nivel</th>
+            <th class="descripcion">Descripción</th>
+            <th class="puntaje">Puntaje</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="nivel">Excelente (1.25)</td>
+            <td class="descripcion">
+              Emplea de manera óptima la estructura semántica (<code>header</code>, <code>main</code>, <code>section</code>, <code>footer</code>, etc.), 
+              y todas las etiquetas básicas (enlaces, tablas, formularios, imágenes) están presentes y bien anidadas. 
+              El HTML es muy claro.
+            </td>
+            <td class="puntaje">1.25</td>
+          </tr>
+          <tr>
+            <td class="nivel">Bueno (1.0)</td>
+            <td class="descripcion">
+              Cubre la mayoría de etiquetas de HTML (texto, enlaces, imágenes, tablas, formularios) con pocos errores en su organización. 
+              No se detectan problemas graves de anidamiento o semántica.
+            </td>
+            <td class="puntaje">1.0</td>
+          </tr>
+          <tr>
+            <td class="nivel">Aceptable (0.75)</td>
+            <td class="descripcion">
+              Usa etiquetas mínimas para el funcionamiento, pero se observan omisiones notables (falta alguna sección semántica 
+              o un formulario/tipo de elemento). Presenta errores de estructura que no rompen la página, pero restan claridad.
+            </td>
+            <td class="puntaje">0.75</td>
+          </tr>
+          <tr>
+            <td class="nivel">Deficiente (0.5)</td>
+            <td class="descripcion">
+              HTML desordenado y escaso. Falta la mayoría de elementos solicitados (no hay tablas, imágenes o formularios) 
+              o hay múltiples errores graves de semántica/anidamiento.
+            </td>
+            <td class="puntaje">0.5</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CRITERIO 2 -->
+    <div class="criterio">
+      <h2>Criterio 2: Estilos CSS y Maquetación (CE2, RA4)</h2>
+      <p class="ponderacion">Ponderación máxima: <span class="highlight">1.25 puntos</span></p>
+      <h3>Aspectos a evaluar</h3>
+      <ul class="aspects">
+        <li>Aplicación de hojas de estilo internas o externas (color, tipografías, posicionamiento).</li>
+        <li>Maquetación: uso de contenedores, ancho (<code>width</code>), márgenes, paddings, fondo (<code>background</code>).</li>
+        <li>Inspiración en el proyecto “Menú del Restaurante” para centrar, manejar un color de fondo, etc.</li>
+      </ul>
+
+      <p class="table-title">Tabla de nivel de logro</p>
+      <table>
+        <thead>
+          <tr>
+            <th class="nivel">Nivel</th>
+            <th class="descripcion">Descripción</th>
+            <th class="puntaje">Puntaje</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="nivel">Excelente (1.25)</td>
+            <td class="descripcion">
+              Uso avanzado de selectores (<code>clases</code>/<code>ID</code>) con propiedades de posicionamiento, colores 
+              y tipografías coherentes. Diseño limpio y responsive básico. 
+              Se aprecian varios aspectos aprendidos en el proyecto de menú (centrado, background, etc.).
+            </td>
+            <td class="puntaje">1.25</td>
+          </tr>
+          <tr>
+            <td class="nivel">Bueno (1.0)</td>
+            <td class="descripcion">
+              Aplica correctamente la mayoría de reglas CSS (tipografía, color, maquetación). 
+              Puede presentar algunos pequeños desajustes pero en general cumple con lo esperado.
+            </td>
+            <td class="puntaje">1.0</td>
+          </tr>
+          <tr>
+            <td class="nivel">Aceptable (0.75)</td>
+            <td class="descripcion">
+              Emplea reglas CSS básicas sin demasiada coherencia visual (colores/espacios). 
+              No se aprovechan completamente los ejemplos de menú, aunque sí hay un mínimo de estructura y estilos.
+            </td>
+            <td class="puntaje">0.75</td>
+          </tr>
+          <tr>
+            <td class="nivel">Deficiente (0.5)</td>
+            <td class="descripcion">
+              Apenas contiene estilos o están sumamente desordenados. 
+              No se evidencian los patrones básicos de maquetación (centrado, uso de background, tipografías).
+            </td>
+            <td class="puntaje">0.5</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CRITERIO 3 -->
+    <div class="criterio">
+      <h2>Criterio 3: Usabilidad y Accesibilidad (RA1)</h2>
+      <p class="ponderacion">Ponderación máxima: <span class="highlight">1.25 puntos</span></p>
+      <h3>Aspectos a evaluar</h3>
+      <ul class="aspects">
+        <li>Accesibilidad: uso de <code>alt</code> en imágenes, <code>label</code> en formularios, encabezados lógicos, <code>lang</code> en la página, enlace “Saltar al contenido”, etc.</li>
+        <li>Usabilidad: menú de navegación claro, colores con contraste adecuado, respuesta en dispositivos móviles, orden semántico de secciones.</li>
+        <li>Deben observarse 10 elementos en total (5 de accesibilidad + 5 de usabilidad), inspirados en buenas prácticas.</li>
+      </ul>
+
+      <p class="table-title">Tabla de nivel de logro</p>
+      <table>
+        <thead>
+          <tr>
+            <th class="nivel">Nivel</th>
+            <th class="descripcion">Descripción</th>
+            <th class="puntaje">Puntaje</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="nivel">Excelente (1.25)</td>
+            <td class="descripcion">
+              Cumple plenamente con los 10 elementos solicitados: <code>alt</code> en todas las imágenes, 
+              <code>label</code> y semántica en formularios, un enlace para saltar al contenido, 
+              menú o índices claros, colores contrastantes. Diseño responsive que facilita la navegación.
+            </td>
+            <td class="puntaje">1.25</td>
+          </tr>
+          <tr>
+            <td class="nivel">Bueno (1.0)</td>
+            <td class="descripcion">
+              Aplica la mayoría de esos elementos (7-8) con algunos detalles por pulir (p.ej., un <code>alt</code> descriptivo faltante o contraste dudoso). 
+              No afecta gravemente la accesibilidad o usabilidad.
+            </td>
+            <td class="puntaje">1.0</td>
+          </tr>
+          <tr>
+            <td class="nivel">Aceptable (0.75)</td>
+            <td class="descripcion">
+              Cumple ciertos aspectos básicos (3-5) pero faltan varios puntos importantes 
+              (p.ej., no hay skip link, <code>label</code> asociadas, <code>alt</code> incompletos). 
+              La usabilidad del menú es funcional, aunque básica.
+            </td>
+            <td class="puntaje">0.75</td>
+          </tr>
+          <tr>
+            <td class="nivel">Deficiente (0.5)</td>
+            <td class="descripcion">
+              No aplica casi ningún principio de accesibilidad (sin <code>alt</code>, sin <code>label</code>) 
+              y la usabilidad es limitada (difícil navegación, colores muy contrastantes o muy bajos, sin responsividad).
+            </td>
+            <td class="puntaje">0.5</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CRITERIO 4 -->
+    <div class="criterio">
+      <h2>Criterio 4: Animaciones y Requisitos del Proyecto (CE3, RA4)</h2>
+      <p class="ponderacion">Ponderación máxima: <span class="highlight">1.25 puntos</span></p>
+      <h3>Aspectos a evaluar</h3>
+      <ul class="aspects">
+        <li>Animaciones básicas con transiciones o transformaciones (hover, color, escalado, etc.).</li>
+        <li>Requisitos finales del proyecto de hoja de vida:
+          <ul style="list-style: circle; margin-left: 20px;">
+            <li>Secciones de texto (perfil, proyectos, etc.)</li>
+            <li>Imágenes/capturas de proyectos</li>
+            <li>Tabla de tecnologías</li>
+            <li>Formulario de contacto</li>
+            <li>Ejemplo de uso de background</li>
+            <li>Referencia a ejemplos de Cat Photos y Menú</li>
+          </ul>
+        </li>
+      </ul>
+
+      <p class="table-title">Tabla de nivel de logro</p>
+      <table>
+        <thead>
+          <tr>
+            <th class="nivel">Nivel</th>
+            <th class="descripcion">Descripción</th>
+            <th class="puntaje">Puntaje</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="nivel">Excelente (1.25)</td>
+            <td class="descripcion">
+              Incluye al menos una animación o transición reconocible (hover en tarjetas, botones, etc.) 
+              y cumple todas las secciones indicadas (texto personal, proyectos con capturas, tabla de tecnologías, formulario). 
+              Uso adecuado de fondo o color de fondo, reflejando los ejemplos de clase.
+            </td>
+            <td class="puntaje">1.25</td>
+          </tr>
+          <tr>
+            <td class="nivel">Bueno (1.0)</td>
+            <td class="descripcion">
+              Muestra animaciones sencillas (hover o cambio de color en enlaces). 
+              Incluye la mayoría de secciones solicitadas (quizá alguna menor incompleta), 
+              pero cumple el objetivo principal.
+            </td>
+            <td class="puntaje">1.0</td>
+          </tr>
+          <tr>
+            <td class="nivel">Aceptable (0.75)</td>
+            <td class="descripcion">
+              Mínimo de animación (un simple hover en un botón). 
+              Faltan una o dos secciones clave (p.ej., no se incluyó la tabla o el formulario) 
+              o las capturas de proyectos son escasas.
+            </td>
+            <td class="puntaje">0.75</td>
+          </tr>
+          <tr>
+            <td class="nivel">Deficiente (0.5)</td>
+            <td class="descripcion">
+              No presenta animaciones/transiciones. No cumple varios de los requisitos (sin formulario, 
+              sin capturas, sin tabla de tecnologías). Presenta un contenido muy reducido.
+            </td>
+            <td class="puntaje">0.5</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</body>
+</html>
